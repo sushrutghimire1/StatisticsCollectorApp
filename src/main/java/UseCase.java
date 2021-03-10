@@ -14,8 +14,10 @@ public class UseCase {
     }
 
     private static void statsByEmployee() {
-        StatisticsCollector<Employee, ? extends Statistic> collector = new EmployeeStatisticsCollector();
 
+
+        StatisticsCollector<Employee, ? extends Statistic> collector = new EmployeeStatisticsCollector();
+        System.out.println("###" + collector.getName() + "###");
         ArrayList<Employee> objects = new ArrayList<>();
 
         Employee sushrut = new Employee();
@@ -51,7 +53,7 @@ public class UseCase {
 
     private static void statsByString() {
         StatisticsCollector<String, ? extends Statistic> collector = new StringStatisticsCollector();
-
+        System.out.println("###" + collector.getName() + "###");
         ArrayList<String> objects = new ArrayList<>();
 
         objects.add("abcD");
